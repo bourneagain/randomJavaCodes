@@ -18,7 +18,14 @@ public class HeavyThread implements Runnable {
 
     @Override
     public void run() {
+        long l = 0;
         while (true) {
+            l++;
+//            System.out.println("INSIDE HEAVY : "+ l );
+            if(l == 50){
+                Thread.dumpStack();
+                break;
+            }
             String data = "";
 
             // make some shit up

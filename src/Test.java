@@ -1,6 +1,7 @@
 //import java.lang.management.OperatingSystemMXBean;
 
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -13,6 +14,9 @@ import java.util.TreeSet;
  */
 public class Test {
     Map<String, String> cache;
+    int aint;
+
+
     Test(){
         cache = new HashMap<String, String>();
         cache.put("1", "sama");
@@ -21,6 +25,48 @@ public class Test {
 
     }
 
+
+
+    void checkPassMethodToMethod(){
+
+    }
+
+
+    void checkArray(){
+
+//        List a = new ArrayList<>();
+        int[] a  = {1,2,3};
+        Class b = a.getClass();
+//        a.add(21);
+        System.out.println(b.isArray());
+//        System.out.println();
+
+    }
+    void checkInt(){
+        int a = Integer.MAX_VALUE;
+        System.out.println(a);
+        a++;
+        System.out.println(a);
+    }
+
+    void checkFinal(){
+        Test a;
+        a = new Test();
+        a.aint = 0;
+        a.aint = 1;
+        a = new Test();
+        a.aint = 1;
+        System.out.println(a.aint);
+
+    }
+
+
+    void checkHashCodeFinal(){
+        String[] a = {"shyam", "sowbi"};
+        for(final String str : a){
+            System.out.println(System.identityHashCode(str));
+        }
+    }
     void checkEquals(){
         String a = new String("test");
         String b = new String("test");
@@ -52,6 +98,10 @@ public class Test {
 
     public static void main(String args[]){
         Test a = new Test();
+        a.checkHashCodeFinal();
+//        a.checkFinal();
+//        a.checkArray();
+//        a.checkInt();
 //        List<String> names = new ArrayList<>();
 //        names.add("z");
 //        names.add("a");
@@ -62,6 +112,6 @@ public class Test {
 //        System.out.println(names.toString());
 //        a.check2(names);
 //        System.out.println(names.toString());
-        a.checkEquals();
+//        a.checkEquals();
     }
 }

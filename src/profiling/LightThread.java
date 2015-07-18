@@ -21,6 +21,7 @@ public class LightThread implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
             if(l == Long.MAX_VALUE) {
                 l = 0l;
             }
