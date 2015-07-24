@@ -9,7 +9,7 @@ public class Samples {
     String b = new String("sam");
 
     void testAdd(){
-        List a = new ArrayList<>();
+        List a = new ArrayList<Object>();
         a.add(2);
         a.add("sam");
         for(Object i : a){
@@ -27,4 +27,6 @@ public class Samples {
         a.testAdd();
 
     }
+
+
 }

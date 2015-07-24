@@ -17,7 +17,7 @@ public class Thread2 implements Runnable  {
             }
         }
 
-        final List<Integer> primes = new ArrayList<>();
+        final List<Integer> primes = new ArrayList<Integer>();
 
         for (int i = 2; i <= target; ++i) {
             if (!nonPrime[i]) primes.add(i);
@@ -28,7 +28,7 @@ public class Thread2 implements Runnable  {
     @Override
     public void run() {
         while (true){
-            List<Integer> lia = new ArrayList<>(primesUpTo(500));
+            List<Integer> lia = new ArrayList<Integer>(primesUpTo(500));
             System.out.println("THREAD2 DONE");
             try {
                 Thread.sleep(1000);
