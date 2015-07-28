@@ -26,6 +26,25 @@ public class Test   {
 
     }
 
+    void checkHash(){
+        List<String> a = new ArrayList<String>();
+        a.add("test");
+        Byte[] b = new Byte[10];
+
+        System.out.println(b.hashCode());
+//        System.out.println(a.hashCode());
+
+
+    }
+    void checkHashMap(){
+        Map amap = new HashMap();
+        amap.put("name","sam");
+        amap.put(null,"this is null");
+//        System.out.println(amap.get(null));
+        System.out.println("".equals(null));
+
+    }
+
     void checkJSON(){
 
         String str = "{(\"b1fb0a0f-d869-4e87-a1a1-57daa8d31d1b\" 6700) {\"exclaim3\" 0, \"word\" 1, \"exclaim2\" 1, \"__acker\" 1, \"exclaim1\" 1}, (\"b1fb0a0f-d869-4e87-a1a1-57daa8d31d1b\" 6702) {\"exclaim3\" 1, \"word\" 0, \"exclaim2\" 1, \"__acker\" 1, \"exclaim1\" 0}, (\"b1fb0a0f-d869-4e87-a1a1-57daa8d31d1b\" 6701) {\"exclaim3\" 0, \"word\" 0, \"exclaim2\" 1, \"__acker\" 1, \"exclaim1\" 1}, (\"b1fb0a0f-d869-4e87-a1a1-57daa8d31d1b\" 6703) {\"exclaim3\" 0, \"word\" 1, \"exclaim2\" 1, \"__acker\" 1, \"exclaim1\" 0}} {{\"b1fb0a0f-d869-4e87-a1a1-57daa8d31d1b\" 6700} {\"jvm_gcCount\" 10.0, \"jvm_gcTime\" 281.0, \"heap_maxBytes\" 7.16177408E8, \"nonHeap_committedBytes\" 5.6532992E7, \"heap_initBytes\" 2.68435456E8, \"jvm_threadCount\" 34.0, \"nonHeap_usedBytes\" 5.53884E7, \"jvm_cpuUtil\" 0.3758919057368638, \"nonHeap_maxBytes\" -1.0, \"heap_committedBytes\" 3.07232768E8, \"nonHeap_initBytes\" 2555904.0, \"heap_usedBytes\" 2.0714768E7}, {\"b1fb0a0f-d869-4e87-a1a1-57daa8d31d1b\" 6702} {\"jvm_gcCount\" 8.0, \"jvm_gcTime\" 270.0, \"heap_maxBytes\" 7.16177408E8, \"nonHeap_committedBytes\" 5.4042624E7, \"heap_initBytes\" 2.68435456E8, \"jvm_threadCount\" 32.0, \"nonHeap_usedBytes\" 5.2980432E7, \"jvm_cpuUtil\" 0.005608130217561334, \"nonHeap_maxBytes\" -1.0, \"heap_committedBytes\" 3.145728E8, \"nonHeap_initBytes\" 2555904.0, \"heap_usedBytes\" 1.35701344E8}, {\"b1fb0a0f-d869-4e87-a1a1-57daa8d31d1b\" 6701} {\"jvm_gcCount\" 8.0, \"jvm_gcTime\" 270.0, \"heap_maxBytes\" 7.16177408E8, \"nonHeap_committedBytes\" 5.3870592E7, \"heap_initBytes\" 2.68435456E8, \"jvm_threadCount\" 32.0, \"nonHeap_usedBytes\" 5.2727312E7, \"jvm_cpuUtil\" 0.3190378387036529, \"nonHeap_maxBytes\" -1.0, \"heap_committedBytes\" 3.19291392E8, \"nonHeap_initBytes\" 2555904.0, \"heap_usedBytes\" 1.38464984E8}, {\"b1fb0a0f-d869-4e87-a1a1-57daa8d31d1b\" 6703} {\"jvm_gcCount\" 9.0, \"jvm_gcTime\" 288.0, \"heap_maxBytes\" 7.16177408E8, \"nonHeap_committedBytes\" 5.5353344E7, \"heap_initBytes\" 2.68435456E8, \"jvm_threadCount\" 32.0, \"nonHeap_usedBytes\" 5.4306728E7, \"jvm_cpuUtil\" 0.004610284774249232, \"nonHeap_maxBytes\" -1.0, \"heap_committedBytes\" 3.18767104E8, \"nonHeap_initBytes\" 2555904.0, \"heap_usedBytes\" 5.7841904E7}}";
@@ -104,9 +123,13 @@ public class Test   {
         }
     }
 
+
+
     public static void main(String args[]){
         Test a = new Test();
-        a.checkJSON();
+        a.checkHash();
+//        a.checkHashMap();
+//        a.checkJSON();
 //        a.checkHashCodeFinal();
 //        a.checkFinal();
 //        a.checkArray();
