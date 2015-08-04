@@ -26,6 +26,7 @@ public class Test   {
 
     }
 
+
     void checkHash(){
         List<String> a = new ArrayList<String>();
         a.add("test");
@@ -127,7 +128,8 @@ public class Test   {
 
     public static void main(String args[]){
         Test a = new Test();
-        a.checkHash();
+
+//        a.checkHash();
 //        a.checkHashMap();
 //        a.checkJSON();
 //        a.checkHashCodeFinal();
