@@ -26,6 +26,15 @@ public class Test   {
 
     }
 
+    void testObjectArrayList(){
+        ArrayList<Object> a = new ArrayList<Object>();
+        HashMap<String, Integer> b = new HashMap<String, Integer>();
+        b.put("sam",23);
+        a.add(1);
+        a.add(2);
+        a.add(b);
+        System.out.println(a.toString());
+    }
 
     void checkHash(){
         List<String> a = new ArrayList<String>();
@@ -128,7 +137,7 @@ public class Test   {
 
     public static void main(String args[]){
         Test a = new Test();
-
+        a.testObjectArrayList();
 //        a.checkHash();
 //        a.checkHashMap();
 //        a.checkJSON();
